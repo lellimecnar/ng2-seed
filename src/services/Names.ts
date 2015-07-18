@@ -1,10 +1,13 @@
-export class Names {
-	names = ['Dijkstra', 'Knuth', 'Turing', 'Hopper'];
+let _names = ['Dijkstra', 'Knuth', 'Turing', 'Hopper'];
 
-	get() {
-		return this.names;
+export class Names {
+
+	static get list() {
+		return _names;
 	}
-	add(value: string) {
-		this.names.push(value);
+
+	static add(value: string) {
+		_names.push(value);
+		return _names;
 	}
 }

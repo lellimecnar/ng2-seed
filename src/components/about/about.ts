@@ -1,5 +1,7 @@
 import {Component, View, NgFor} from 'angular/angular2';
 
+import {Names} from '../../services/Names';
+
 @Component({
 	selector: 'component-2'
 })
@@ -9,11 +11,11 @@ import {Component, View, NgFor} from 'angular/angular2';
 })
 export class About {
 	constructor() {
-		this.list = ['Dijkstra', 'Knuth', 'Turing', 'Hopper'];
+		this.list = Names.list;
 	}
 
 	addName(newname) {
-		this.list.push(newname.value);
+		this.list = Names.add(newname.value);
 		newname.value = '';
 	}
 }

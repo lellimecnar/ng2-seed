@@ -1,7 +1,7 @@
 import {Component, View, NgFor} from 'angular/angular2';
 import {RouteConfig, RouterOutlet, RouterLink} from 'angular/router';
 
-import {routes} from '../../routes';
+import {routes} from '../../config/routes';
 
 @Component({
 	selector: 'app'
